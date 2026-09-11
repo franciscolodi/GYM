@@ -1,3 +1,4 @@
 date,entry_time,exit_time,duration_minutes,status
 2026-09-11,15:20:04,,,sin_salida
 2026-09-11,15:21:27,15:27:15,5.8,completa
+2026-09-11,,15:27:44,,sin_entrada
