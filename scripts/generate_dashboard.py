@@ -29,7 +29,9 @@ TEMPLATE = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Reporte de Gym</title>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js" crossorigin="anonymous"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4"></script>>
+
 <style>
   :root {{
     --bg: #f5f6f8; --card-bg: #ffffff; --text: #14161a; --text-muted: #6b7280;
