@@ -6,9 +6,14 @@ on:
     paths:
       - "data/gym_sessions.csv"
       - "scripts/generate_dashboard.py"
+
   schedule:
-    # Todos los días a las 12:00 UTC (ajusta si quieres otra hora)
-    - cron: "0 12 * * *"
+    # 15:00 Chile = 18:00 UTC
+    - cron: "0 18 * * *"
+
+    # 22:00 Chile = 01:00 UTC del día siguiente
+    - cron: "0 1 * * *"
+
   workflow_dispatch: {}
 
 permissions:
@@ -23,6 +28,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
@@ -43,9 +49,11 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
