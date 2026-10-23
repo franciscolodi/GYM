@@ -27,3 +27,4 @@ date,entry_time,exit_time,duration_minutes,status
 2026-10-19,21:02:25,22:09:52,67.5,completa
 2026-10-21,20:12:25,22:09:52,117.5,completa
 2026-10-23,09:13:00,09:13:21,0.3,completa
+2026-10-23,,09:15:38,,sin_entrada
